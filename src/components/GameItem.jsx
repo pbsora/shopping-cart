@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { BiSolidDownArrow } from "react-icons/bi";
-import styles from "./GameItem.module.css";
+import styles from "./css modules/GameItem.module.css";
 
 export default function GameItem({ title, image, key, rating }) {
   const [tab, setTab] = useState(false);
@@ -17,7 +17,7 @@ export default function GameItem({ title, image, key, rating }) {
   };
 
   return (
-    <div className={styles.gameItem} key={key} ref={parent}>
+    <div className={styles.gameItem + " gameIt"} key={key} ref={parent}>
       <img src={image} className={styles.gameImage} />
       <div className={styles.gameInfo}>
         <h1 className={styles.gameTitle}>{title}</h1>

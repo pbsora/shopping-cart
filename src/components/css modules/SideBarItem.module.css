@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sideBarItem {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 5px;
+  background-color: black;
+  min-height: 10%;
+}
+
+.gameInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+img {
+  max-width: 30vw;
+}

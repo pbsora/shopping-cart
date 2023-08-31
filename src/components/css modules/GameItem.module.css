@@ -8,7 +8,7 @@
 }
 
 .gameImage {
-  width: 90vw;
+  min-width: 90vw;
 }
 
 .gameInfo {
@@ -96,4 +96,46 @@ hr.rounded {
 
 .cancelBtn:hover {
   background-color: rgb(188, 62, 62);
+}
+
+@media (min-width: 750px) {
+  .gameItem {
+    color: white;
+    background-color: rgb(12, 12, 12);
+    border-radius: 5px;
+    text-align: center;
+    font-family: var(--common-font);
+    min-height: 4vh;
+  }
+  .gameIt {
+    max-width: 25vw;
+  }
+
+  .gameImage {
+    min-width: 45vw;
+    height: 18vh;
+  }
+
+  .gameTitle {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+  .gameItem svg {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+  .gameBuy {
+    display: flex;
+    justify-content: space-between;
+  }
+  hr.rounded {
+    width: 40vw;
+    border-radius: 5px;
+    border-top: 2px solid white;
+    margin: 0 auto;
+  }
+
+  .gameInfo {
+    max-height: 8vh;
+  }
 }

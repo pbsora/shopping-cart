@@ -1,11 +1,11 @@
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
-import styles from "./Footer.module.css";
+import styles from "./css modules/Footer.module.css";
 
-export default function Footer() {
+export default function Footer({ sideBar }) {
   return (
     <footer>
-      <div className={styles.footer}>
+      <div className={sideBar ? styles.footerHide : styles.footer}>
         <p>Sora</p>
         <a href="https://github.com/pbsora" target="_blank">
           <AiFillGithub />

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { FallingLines } from "react-loader-spinner";
+import style from "./css modules/Catalogue.module.css";
 
 import GameItem from "./GameItem";
 
-export default function Catalogue() {
+export default function Catalogue({ sideBar }) {
   const [gameData, setGameData] = useState([]);
   const [load, setLoad] = useState(false);
 
@@ -28,15 +29,18 @@ export default function Catalogue() {
 
   if (load)
     return (
-      <div id="gameCatalogue">
+      <div className={style.gameCatalogue}>
         <FallingLines color="black" />;
       </div>
     );
 
   return (
     <>
-      <div id="gameCatalogue">
-        <h1 className="catalogueTitle">Catalogue</h1>
+      <h1 className={style.catalogueTitle}>Catalogue</h1>
+      <div
+        id="gameCatalogue"
+        className={sideBar ? style.gameCatalogueHide : style.gameCatalogue}
+      >
         {gameData.map((game) => (
           <GameItem
             title={game.name}

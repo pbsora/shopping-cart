@@ -4,6 +4,11 @@
   align-items: center;
   background-color: black;
   color: white;
+  padding: 20px 0;
+}
+
+.footerHide {
+  display: none;
 }
 
 .footer svg {

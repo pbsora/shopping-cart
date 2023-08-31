@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarClosed {
+  display: none;
+  top: 0;
+  height: 100vh;
+  width: 60vw;
+  right: -100vw;
+  transition: 250ms ease-in-out all;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  background-color: #efefef;
+  height: 100vh;
+  width: 80vw;
+  right: 0;
+  transition: 250ms ease-in-out all;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 2rem;
+}
+
+.top {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  color: white;
+}
+.top svg {
+  font-size: 1.6rem;
+}
+
+.cartItems {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hide;
+  max-height: 80vh;
+  flex-grow: 2;
+}
+
+.sideFooter {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.sideFooter button {
+  width: 9rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-family: "Signika Negative", sans-serif;
+  background-color: rgb(116, 162, 47);
+  color: white;
+}
+
+@media (min-width: 750px) {
+  .sidebarClosed {
+    position: none;
+    top: 0;
+    height: 100vh;
+    width: 60vw;
+    right: -100vw;
+    transition: 250ms ease-in-out all;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
