@@ -8,7 +8,7 @@
 }
 
 .gameImage {
-  min-width: 90vw;
+  max-width: 90vw;
 }
 
 .gameInfo {
@@ -40,7 +40,7 @@
 }
 
 .gameItem svg {
-  font-size: 1rem;
+  font-size: 2rem;
   padding-bottom: 10px;
 }
 
@@ -63,6 +63,7 @@ hr.rounded {
   width: 80vw;
   border-radius: 5px;
   border-top: 2px solid white;
+  margin: 20px auto 20px;
 }
 
 .toggleTabOpen {
@@ -106,13 +107,14 @@ hr.rounded {
     text-align: center;
     font-family: var(--common-font);
     min-height: 4vh;
+    margin: 0 20px;
   }
   .gameIt {
     max-width: 25vw;
   }
 
   .gameImage {
-    min-width: 45vw;
+    max-width: 45vw;
     height: 18vh;
   }
 
@@ -123,6 +125,8 @@ hr.rounded {
   .gameItem svg {
     font-size: 2rem;
     padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
   .gameBuy {
     display: flex;
@@ -132,10 +136,37 @@ hr.rounded {
     width: 40vw;
     border-radius: 5px;
     border-top: 2px solid white;
-    margin: 0 auto;
+    margin: 50px auto 20px;
   }
 
   .gameInfo {
     max-height: 8vh;
+  }
+}
+
+@media (min-width: 1500px) {
+  .gameImage {
+    width: 18vw;
+  }
+
+  .gameItem {
+    max-width: 25vw;
+    overflow: hidden;
+  }
+
+  .gameBuy button {
+    min-width: 8rem;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+  .toggleTabOpen {
+    padding: 0;
+  }
+
+  hr.rounded {
+    width: 15vw;
+    border-radius: 5px;
+    border-top: 2px solid white;
+    margin: 50px auto 20px;
   }
 }

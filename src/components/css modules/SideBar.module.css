@@ -5,26 +5,26 @@
   padding: 0;
 }
 
-.sidebarClosed {
-  display: none;
-  top: 0;
-  height: 100vh;
-  width: 60vw;
-  right: -100vw;
-  transition: 250ms ease-in-out all;
-}
-
 .sidebar {
   position: absolute;
   top: 0;
   background-color: #efefef;
-  height: 100vh;
-  width: 80vw;
-  right: 0;
-  transition: 250ms ease-in-out all;
+  min-height: 100vh;
+  width: 75vw;
+  right: -100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: slide 300ms ease-in-out both;
+}
+
+@keyframes slide {
+  from {
+    right: -100vw;
+  }
+  to {
+    right: 0;
+  }
 }
 
 p {
@@ -75,15 +75,29 @@ p {
 }
 
 @media (min-width: 750px) {
-  .sidebarClosed {
-    position: none;
+  .sidebar {
+    position: absolute;
     top: 0;
-    height: 100vh;
+    background-color: #efefef;
     width: 60vw;
     right: -100vw;
-    transition: 250ms ease-in-out all;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    animation: slide 300ms ease-in-out both;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    background-color: #efefef;
+    width: 35vw;
+    right: -100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: slide 300ms ease-in-out both;
   }
 }

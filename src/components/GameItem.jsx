@@ -25,6 +25,7 @@ export default function GameItem({ title, image, key, rating }) {
         <span className={styles.gameRating}>Rating: {" " + rating}</span>
       </div>
       <div className={styles.toggleTab} onClick={handleTab}>
+        <br />
         {!tab && <BiSolidDownArrow />}
       </div>
       {tab && (

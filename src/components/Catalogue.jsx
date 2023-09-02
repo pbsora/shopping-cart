@@ -36,7 +36,7 @@ export default function Catalogue({ sideBar }) {
 
   return (
     <>
-      <h1 className={style.catalogueTitle}>Catalogue</h1>
+      {sideBar || <h1 className={style.catalogueTitle}>Catalogue</h1>}
       <div
         id="gameCatalogue"
         className={sideBar ? style.gameCatalogueHide : style.gameCatalogue}

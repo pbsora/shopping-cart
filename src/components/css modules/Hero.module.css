@@ -43,10 +43,30 @@ a {
     Tablet version
 ----------------*/
 
-@media (min-width: 750px) {
+@media (min-width: 850px) {
   .hero {
-    min-width: 110vw;
+    min-width: 100vw;
     height: 100vh;
     content: url(/src/assets/hero-tablet.gif);
+  }
+}
+
+@media (min-width: 1400px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .hero {
+    min-width: 100vw;
+    height: 100vh;
+    content: url(/src/assets/hero-smallScreen.gif);
+  }
+}
+
+@media (min-width: 2000px) {
+  .hero {
+    width: 100vw;
+    height: 100vh;
+    content: url(/src/assets/hero.gif);
   }
 }

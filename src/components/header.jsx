@@ -1,12 +1,15 @@
 import { FiShoppingCart } from "react-icons/fi";
-import "./header.css";
+import style from "./css modules/header.module.css";
 
 export default function Header({ handleSideBar }) {
   return (
     <>
       <header>
         <p>Sora</p>
-        <FiShoppingCart onClick={handleSideBar} />
+        <div className={style.cart} onClick={handleSideBar}>
+          <FiShoppingCart className={style.cartIcon} />
+          <span className={style.counter}>1</span>
+        </div>
       </header>
     </>
   );

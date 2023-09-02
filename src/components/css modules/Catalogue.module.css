@@ -3,16 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  /*   padding: 0 10vw;
+ */
   gap: 20px;
   padding-bottom: 10px;
-  padding: 30px 100px;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .catalogueTitle {
   color: black;
-  margin: 0 40vw;
+  text-align: center;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .gameCatalogueHide {
@@ -23,5 +26,13 @@
   .gameCatalogue {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1500px) {
+  .gameCatalogue {
+    display: grid;
+    grid-template-columns: repeat(5, 19vw);
+    margin: 0 20px;
   }
 }

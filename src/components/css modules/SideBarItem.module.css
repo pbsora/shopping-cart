@@ -11,7 +11,6 @@
   overflow: hidden;
   margin: 0 5px;
   background-color: black;
-  min-height: 10%;
 }
 
 .gameInfo {
@@ -22,6 +21,24 @@
   color: white;
 }
 
-img {
-  max-width: 30vw;
+.gameIcon {
+  min-width: 20vw;
+  max-width: 25vw;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .gameIcon {
+    min-width: 5vw;
+    max-width: 15vw;
+    height: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .gameIcon {
+    min-width: 5vw;
+    max-width: 10vw;
+    height: auto;
+  }
 }

@@ -4,12 +4,13 @@ import SideBarItem from "./SideBarItem";
 
 export default function SideBar({ sideBar, handleSideBar }) {
   return (
-    <div className={sideBar ? styles.sidebar : styles.sidebarClosed}>
+    <div className={styles.sidebar}>
       <div className={styles.top}>
         <AiOutlineClose onClick={handleSideBar} />
         <p>Cart preview</p>
       </div>
       <div className={styles.cartItems}>
+        <SideBarItem />
         <SideBarItem />
         <SideBarItem />
         <SideBarItem />

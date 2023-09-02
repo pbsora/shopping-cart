@@ -20,7 +20,7 @@ export default function Homepage() {
       <Hero />
       <Catalogue sideBar={sideBar} />
       <Footer sideBar={sideBar} />
-      <SideBar sideBar={sideBar} handleSideBar={handleSideBar} />
+      {sideBar && <SideBar sideBar={sideBar} handleSideBar={handleSideBar} />}
     </>
   );
 }

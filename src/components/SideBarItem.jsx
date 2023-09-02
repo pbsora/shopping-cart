@@ -6,6 +6,7 @@ export default function SideBarItem() {
       <img
         src="https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
         alt=""
+        className={style.gameIcon}
       />
       <div className={style.gameInfo}>
         <span>The Witcher 3</span>
