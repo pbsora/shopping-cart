@@ -2,7 +2,7 @@ import styles from "./css modules/SideBar.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 import SideBarItem from "./SideBarItem";
 
-export default function SideBar({ sideBar, handleSideBar }) {
+export default function SideBar({ sideBar, handleSideBar, cart }) {
   return (
     <div className={styles.sidebar}>
       <div className={styles.top}>
@@ -10,14 +10,13 @@ export default function SideBar({ sideBar, handleSideBar }) {
         <p>Cart preview</p>
       </div>
       <div className={styles.cartItems}>
-        <SideBarItem />
-        <SideBarItem />
-        <SideBarItem />
-        <SideBarItem />
+        {cart.map((item) => (
+          <SideBarItem game={item} />
+        ))}
       </div>
       <div className={styles.sideFooter}>
         <span>
-          Total: <br></br> $69.99
+          Total: <br></br> {"$" + cart.length * 69}
         </span>
         <button>Checkout</button>
       </div>

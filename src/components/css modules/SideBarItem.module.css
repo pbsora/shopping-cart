@@ -9,15 +9,22 @@
   border: 1px solid black;
   border-radius: 20px;
   overflow: hidden;
-  margin: 0 5px;
+  margin: 0 10px;
   background-color: black;
+}
+
+.sideBarItem:not(:first-child) {
+  margin-top: 10px;
+}
+.sideBarItem:last-child {
+  margin-bottom: 20px;
 }
 
 .gameInfo {
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -32,6 +39,10 @@
     min-width: 5vw;
     max-width: 15vw;
     height: auto;
+  }
+
+  .gameInfo {
+    font-size: 1.8rem;
   }
 }
 

@@ -16,6 +16,12 @@
   flex-direction: column;
   justify-content: space-between;
   animation: slide 300ms ease-in-out both;
+  overflow: hidden;
+}
+
+.sidebar svg,
+.sidebar button {
+  cursor: pointer;
 }
 
 @keyframes slide {
@@ -46,10 +52,7 @@ p {
 
 .cartItems {
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  overflow: hide;
+  overflow-y: scroll;
   max-height: 80vh;
   flex-grow: 2;
 }

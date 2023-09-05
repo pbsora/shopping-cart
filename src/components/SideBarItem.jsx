@@ -1,15 +1,16 @@
 import style from "./css modules/SideBarItem.module.css";
 
-export default function SideBarItem() {
+export default function SideBarItem({ game }) {
   return (
     <div className={style.sideBarItem}>
       <img
-        src="https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
+        src={game.image}
         alt=""
         className={style.gameIcon}
+        onClick={() => console.log(game)}
       />
       <div className={style.gameInfo}>
-        <span>The Witcher 3</span>
+        <span>{game.title}</span>
         <span>$69.99</span>
       </div>
     </div>

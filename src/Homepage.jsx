@@ -8,19 +8,27 @@ import { useState } from "react";
 
 export default function Homepage() {
   const [sideBar, setSideBar] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const handleSideBar = () => {
     setSideBar(!sideBar);
-    console.log(sideBar);
+  };
+
+  const handleCart = (game) => {
+    setCart((prev) => {
+      return [...prev, game];
+    });
   };
 
   return (
     <>
-      <Header handleSideBar={handleSideBar} />
+      <Header handleSideBar={handleSideBar} cart={cart} />
       <Hero />
-      <Catalogue sideBar={sideBar} />
+      <Catalogue sideBar={sideBar} handleCart={handleCart} />
       <Footer sideBar={sideBar} />
-      {sideBar && <SideBar sideBar={sideBar} handleSideBar={handleSideBar} />}
+      {sideBar && (
+        <SideBar sideBar={sideBar} handleSideBar={handleSideBar} cart={cart} />
+      )}
     </>
   );
 }
