@@ -4,7 +4,7 @@ import style from "./css modules/Catalogue.module.css";
 
 import GameItem from "./GameItem";
 
-export default function Catalogue({ sideBar, handleCart }) {
+export default function Catalogue({ sideBar, handleCart, setCart }) {
   const [gameData, setGameData] = useState([]);
   const [load, setLoad] = useState(false);
 
@@ -48,6 +48,7 @@ export default function Catalogue({ sideBar, handleCart }) {
             key={game.id}
             rating={game.rating}
             handleCart={handleCart}
+            setCart={setCart}
           />
         ))}
         {/* <GameItem

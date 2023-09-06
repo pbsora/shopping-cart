@@ -2,7 +2,7 @@ import style from "./css modules/SideBarItem.module.css";
 
 export default function SideBarItem({ game }) {
   return (
-    <div className={style.sideBarItem}>
+    <div className={style.sideBarItem} key={game.key}>
       <img
         src={game.image}
         alt=""

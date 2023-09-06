@@ -3,7 +3,14 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { BiSolidDownArrow } from "react-icons/bi";
 import styles from "./css modules/GameItem.module.css";
 
-export default function GameItem({ title, image, key, rating, handleCart }) {
+export default function GameItem({
+  title,
+  image,
+  key,
+  rating,
+  handleCart,
+  setCart,
+}) {
   const [tab, setTab] = useState(false);
   const [addToCart, setAddToCart] = useState(false);
   const [parent] = useAutoAnimate();
@@ -14,6 +21,10 @@ export default function GameItem({ title, image, key, rating, handleCart }) {
 
   const handleAddCart = () => {
     setAddToCart(!addToCart);
+  };
+
+  const handleRemoveCart = (title) => {
+    setCart((prev) => prev.filter((game) => game.title !== title));
   };
 
   return (
@@ -34,16 +45,21 @@ export default function GameItem({ title, image, key, rating, handleCart }) {
           <div className={styles.gameBuy}>
             <button
               className={addToCart ? styles.cancelBtn : styles.buyBtn}
-              onClick={() =>
-                handleCart(
-                  {
-                    title: title,
-                    image: image,
-                    rating: rating,
-                    key: { key },
-                  },
-                  handleAddCart()
-                )
+              onClick={
+                addToCart
+                  ? () => {
+                      handleRemoveCart(title), handleAddCart();
+                    }
+                  : () =>
+                      handleCart(
+                        {
+                          title: title,
+                          image: image,
+                          rating: rating,
+                          key: { key },
+                        },
+                        handleAddCart()
+                      )
               }
             >
               {addToCart ? "Remove from cart" : "Add to cart"}

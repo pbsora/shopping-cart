@@ -16,7 +16,8 @@ export default function SideBar({ sideBar, handleSideBar, cart }) {
       </div>
       <div className={styles.sideFooter}>
         <span>
-          Total: <br></br> {"$" + cart.length * 69}
+          Total: <br></br> {"$" + 
+          cart.length * 69}
         </span>
         <button>Checkout</button>
       </div>

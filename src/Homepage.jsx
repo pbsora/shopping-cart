@@ -24,7 +24,7 @@ export default function Homepage() {
     <>
       <Header handleSideBar={handleSideBar} cart={cart} />
       <Hero />
-      <Catalogue sideBar={sideBar} handleCart={handleCart} />
+      <Catalogue sideBar={sideBar} handleCart={handleCart} setCart={setCart} />
       <Footer sideBar={sideBar} />
       {sideBar && (
         <SideBar sideBar={sideBar} handleSideBar={handleSideBar} cart={cart} />
